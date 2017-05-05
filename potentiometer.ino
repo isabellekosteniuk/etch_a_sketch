@@ -10,7 +10,7 @@ void setup() {
   Serial.begin(9600);
   pinMode(analogPin0, INPUT);
   pinMode(analogPin1, INPUT);
-  delay(1000);
+  delay(1000); // included to allow serial comm setup
  
 
 }
@@ -18,7 +18,7 @@ void setup() {
 void loop() {
 
   x_sensorValue = analogRead(analogPin0);
-  y_sensorValue = 2*(analogRead(analogPin1));
+  y_sensorValue = analogRead(analogPin1);
   Serial.print(x_sensorValue);
   Serial.print(",");
   Serial.print(y_sensorValue);
